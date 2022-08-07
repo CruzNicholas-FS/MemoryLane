@@ -34,9 +34,9 @@ const fetchOptions = {
 }
 
 const post1 = (posts) => {
-  console.log(posts.blogPostCollection.items[0]);
+  console.log(posts.blogPostCollection.items[2]);
 
-  const firstPost = posts.blogPostCollection.items[0]
+  const firstPost = posts.blogPostCollection.items[2]
 
   const metaTitle = document.querySelector("title");
   metaTitle.innerText=`${posts.homeCollection.items[0].devBlog} - ${firstPost.title}`
