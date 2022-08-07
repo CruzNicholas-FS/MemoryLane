@@ -1,0 +1,31 @@
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #68A691;
+}
+
+.pageTitle{
+    text-align: center;
+    color:#FAF9F9;
+}
+
+.postLink1, .postLink2, .postLink3{
+    text-align:center;
+    text-decoration: none;
+    color:#201E1F;
+}
+
+.postLink1:hover, .postLink2:hover, .postLink3:hover{
+    color:#EF7B45;
+}
+
+.postTitle{
+    width:40%;
+    margin:1em auto;
+}
+
+.postBody{
+    width:40%;
+    margin:0 auto;
+    line-height:1.5em;
+}

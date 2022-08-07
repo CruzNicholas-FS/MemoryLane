@@ -37,14 +37,23 @@ const homePage = (posts) => {
 console.log(posts);
 
 const title = document.createElement("h1");
+title.className="pageTitle"
 
 const postLink1=document.createElement("a");
 const postLink2=document.createElement("a");
 const postLink3=document.createElement("a");
 
+postLink1.className="postLink1"
+postLink2.className="postLink2"
+postLink3.className="postLink3"
+
 const postTitle1=document.createElement("h3");
 const postTitle2=document.createElement("h3");
 const postTitle3=document.createElement("h3");
+
+postTitle1.className="postTitle1"
+postTitle2.className="postTitle2"
+postTitle3.className="postTitle3"
 
 title.innerHTML=posts.homeCollection.items[0].devBlog
 

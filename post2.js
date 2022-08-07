@@ -44,11 +44,15 @@ const post1 = (posts) => {
   const blogTitle = document.createElement("h1");
   blogTitle.innerText=posts.homeCollection.items[0].devBlog
 
+  blogTitle.className="pageTitle";
+
   const postTitle = document.createElement("h3");
   postTitle.innerText=firstPost.title
+  postTitle.className="postTitle";
 
   const postBody = document.createElement("p");
-  postBody.innerText=firstPost.body.json.content[0].content[0].value
+  postBody.innerText=firstPost.body.json.content[0].content[0].value;
+  postBody.className="postBody";
   
   document.body.append(blogTitle, postTitle, postBody)
 }
