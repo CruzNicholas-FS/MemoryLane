@@ -39,4 +39,4 @@ const post1 = (posts) => {
 
 fetch(fetchOptions.endpoint, fetchOptions)
 .then(response => response.json())
-.then(data => homePage(data.data.blogPostCollection));
+.then(data => post1(data.data.blogPostCollection));
