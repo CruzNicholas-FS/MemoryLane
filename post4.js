@@ -1,29 +1,28 @@
 const query = `
 {
-    blogPostCollection {
-        items {
-          sys {
-            firstPublishedAt
-          }
-          title
-          body{
-            json
-          }
-          image{
-            fileName
-            url
-          }
+  blogPostCollection {
+      items {
+        sys {
+          firstPublishedAt
+        }
+        title
+        body{
+          json
+        }
+        image{
+          fileName
         }
       }
-    homeCollection{
-      items {
-        devBlog
-        postLink
-        postLink2
-        postLink3
-      }
+    }
+  homeCollection{
+    items {
+      devBlog
+      postLink
+      postLink2
+      postLink3
     }
   }
+}
 `
 const fetchOptions = {
   spaceID: "axq116fvwwfs",
@@ -38,9 +37,9 @@ const fetchOptions = {
 }
 
 const post1 = (posts) => {
-  console.log(posts.blogPostCollection.items);
+  console.log(posts.blogPostCollection.items[3]);
 
-  const firstPost = posts.blogPostCollection.items[0]
+  const firstPost = posts.blogPostCollection.items[3]
 
   const metaTitle = document.querySelector("title");
   metaTitle.innerText=`${posts.homeCollection.items[0].devBlog} - ${firstPost.title}`
@@ -57,15 +56,8 @@ const post1 = (posts) => {
   const postBody = document.createElement("p");
   postBody.innerText=firstPost.body.json.content[0].content[0].value;
   postBody.className="postBody";
-
-  const postImage = document.createElement("img");
-  postImage.className="postImage";
-  postImage.src=firstPost.image.url;
-  postImage.alt="HUGO Deployment Tutorial Thumbnail";
-  postImage.width="400";
-  postImage.height="200";
   
-  document.body.append(blogTitle, postTitle, postBody, postImage)
+  document.body.append(blogTitle, postTitle, postBody)
 }
 
 fetch(fetchOptions.endpoint, fetchOptions)
