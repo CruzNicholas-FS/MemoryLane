@@ -61,7 +61,7 @@ const post1 = (posts) => {
   const postImage = document.createElement("img");
   postImage.className="postImage";
   postImage.src=firstPost.image.url;
-  postImage.alt="HUGO Deployment Tutorial Thumbnail";
+  postImage.alt="Splitgate Data Portal Homepage";
   postImage.width="400";
   postImage.height="200";
   

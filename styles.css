@@ -9,13 +9,13 @@
     color:#FAF9F9;
 }
 
-.postLink1, .postLink2, .postLink3{
+.postLink{
     text-align:center;
     text-decoration: none;
     color:#201E1F;
 }
 
-.postLink1:hover, .postLink2:hover, .postLink3:hover{
+.postLink:hover{
     color:#EF7B45;
 }
 
